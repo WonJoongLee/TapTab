@@ -15,27 +15,27 @@ import com.example.taptabfe.R;
 import java.util.ArrayList;
 
 /*RecyclerView Adapter*/
-public class RecAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    public ArrayList<Tablet> items = new ArrayList<>();
+public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
+
+    public ArrayList<Tablet> items;
     private Context context;
 
     public RecAdapter(ArrayList<Tablet> items, Context context){
         this.items = items;
         this.context = context;
-
     }
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_mainrecyclerview, parent, false);
         ViewHolder viewHolder = new ViewHolder(itemView);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecAdapter.ViewHolder holder, int position) {
         String string1 = "대여불가";
         String string2 = "대여가능";
         holder.item_deviceName.setText(items.get(position).getDevice_name());
