@@ -20,7 +20,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TapTabFE" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="SvnConfiguration">
@@ -45,10 +45,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1506" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601792843693" />
-    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1601793525391">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1601897642822">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601793525391" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601897642822" />
     <state x="-1459" y="162" key="SettingsEditor" timestamp="1601793526613">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
