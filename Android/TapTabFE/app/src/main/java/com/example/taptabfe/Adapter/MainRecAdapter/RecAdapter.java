@@ -41,7 +41,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
 
         holder.item_deviceName.setText(items.get(position).getDevice_name());
         holder.item_nthDevice.setText(items.get(position).getId());
-        if(items.get(position).getRental() == 0)
+        if(items.get(position).getRental().equals("0"))
             holder.item_rental.setText(string1);
         else
             holder.item_rental.setText(string2);
@@ -50,7 +50,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return items.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

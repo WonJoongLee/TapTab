@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/yellobibrant</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorEdgeEffect">@color/graydark</item>
     </style>
 
 </resources>

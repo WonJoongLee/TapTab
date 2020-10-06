@@ -17,14 +17,15 @@ public class FrameAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch(position){
-            case 0:
+            case 0: // 양성재
                 Frame_YSJ frame_ysj = new Frame_YSJ();
                 return frame_ysj;
-                //return Frame_YSJ.newInstance();
-            case 1:
-                return Frame_YJJ.newInstance();//양진재
-            case 2:
-                return Frame_KSJ.newInstance();//개성재
+            case 1: // 양진재
+                Frame_YJJ frame_yjj = new Frame_YJJ();
+                return frame_yjj;
+            case 2: // 개성재
+                Frame_KSJ frame_ksj = new Frame_KSJ();
+                return frame_ksj;
         }
         return null;
     }

@@ -16,7 +16,6 @@ import com.example.taptabfe.Adapter.MainRecAdapter.RecAdapter;
 import com.example.taptabfe.Adapter.MainRecAdapter.Tablet;
 import com.example.taptabfe.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Frame_YSJ extends Fragment {
@@ -24,22 +23,13 @@ public class Frame_YSJ extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<Tablet> items = new ArrayList<>();
 
-    public static Frame_YSJ newInstance(){
-        Frame_YSJ frame_ysj = new Frame_YSJ();
-        return frame_ysj;
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.item_viewpager, container, false);
 
-        //initDataset();
-        items.clear();
-        items.add(new Tablet("0", 1, "Galaxy Tab A8 with S Pen"));
-        items.add(new Tablet("1", 1, "Galaxy Tab S6"));
-        items.add(new Tablet("2", 1, "Galaxy Tab S7"));
+        initDataset();
 
         Context context = view.getContext();
         RecyclerView recyclerView;
@@ -53,18 +43,15 @@ public class Frame_YSJ extends Fragment {
         RecAdapter adapter = new RecAdapter(items, context);
         recyclerView.setAdapter(adapter);
 
-        //return super.onCreateView(inflater, container, savedInstanceState);
         return view;
     }
 
     private void initDataset(){
         items.clear();
-        items.add(new Tablet("0", 1, "Galaxy Tab A8 with S Pen"));
-        items.add(new Tablet("1", 1, "Galaxy Tab S6"));
-        items.add(new Tablet("2", 1, "Galaxy Tab S7"));
+        items.add(new Tablet("1호기", "1", "Galaxy Tab A8 with S Pen"));
+        items.add(new Tablet("2호기", "1", "Galaxy Tab S6"));
+        items.add(new Tablet("3호기", "1", "Galaxy Tab S7"));
+        items.add(new Tablet("4호기", "1", "Galaxy Tab S6 Lite"));
     }
-
-    /*양성재 빌릴 수 있는 기기 수 등 작업*/
-
 
 }
