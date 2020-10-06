@@ -19,19 +19,19 @@ import com.youth.banner.util.LogUtils;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FragmentPagerAdapter fragmentPagerAdapter;
+    //private FragmentPagerAdapter fragmentPagerAdapter;
+    private ViewPager viewPager;
+    FrameAdapter frameAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewPager viewPager = findViewById(R.id.main_viewpager);
-        fragmentPagerAdapter = new FrameAdapter(getSupportFragmentManager());
+        //ViewPager viewPager = findViewById(R.id.main_viewpager);
+        //fragmentPagerAdapter = new FrameAdapter(getSupportFragmentManager());
+        //viewPager.setAdapter(fragmentPagerAdapter);
 
-        TabLayout tabLayout = findViewById(R.id.tab_layout);
-        viewPager.setAdapter(fragmentPagerAdapter);
-        tabLayout.setupWithViewPager(viewPager);
 
         Banner banner;
         banner = findViewById(R.id.banner);
@@ -45,5 +45,12 @@ public class MainActivity extends AppCompatActivity {
                 .setIndicatorSpace((int)BannerUtils.dp2px(4))
                 .setIndicatorRadius(0)
                 .setDelayTime(5000); // snackbar 제거
+
+        viewPager = findViewById(R.id.main_viewpager);
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(viewPager);
+        frameAdapter = new FrameAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(frameAdapter);
+
     }
 }

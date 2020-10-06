@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 public class FrameAdapter extends FragmentPagerAdapter {
+
+
     public FrameAdapter(@NonNull FragmentManager fm) {
         super(fm);
     }
@@ -16,7 +18,9 @@ public class FrameAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch(position){
             case 0:
-                return Frame_YSJ.newInstance();
+                Frame_YSJ frame_ysj = new Frame_YSJ();
+                return frame_ysj;
+                //return Frame_YSJ.newInstance();
             case 1:
                 return Frame_YJJ.newInstance();//양진재
             case 2:

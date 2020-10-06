@@ -38,6 +38,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull RecAdapter.ViewHolder holder, int position) {
         String string1 = "대여불가";
         String string2 = "대여가능";
+
         holder.item_deviceName.setText(items.get(position).getDevice_name());
         holder.item_nthDevice.setText(items.get(position).getId());
         if(items.get(position).getRental() == 0)
@@ -53,15 +54,15 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView item_nthDevice;
+        TextView item_nthDevice;// = items.get(1).getDevice_name();
         TextView item_deviceName;
         TextView item_rental;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.item_deviceName = itemView.findViewById(R.id.item_deviceName);
-            this.item_nthDevice = itemView.findViewById(R.id.item_nthDevice);
-            this.item_rental = itemView.findViewById(R.id.item_rental);
+            item_deviceName = itemView.findViewById(R.id.item_deviceName);
+            item_nthDevice = itemView.findViewById(R.id.item_nthDevice);
+            item_rental = itemView.findViewById(R.id.item_rental);
         }
 
     }
