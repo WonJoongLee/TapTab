@@ -1,11 +1,13 @@
 package com.example.taptabfe.Adapter.MainRecAdapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,10 +43,20 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
 
         holder.item_deviceName.setText(items.get(position).getDevice_name());
         holder.item_nthDevice.setText(items.get(position).getId());
-        if(items.get(position).getRental().equals("0"))
+        if(items.get(position).getRental().equals("0")) {
             holder.item_rental.setText(string1);
-        else
+            holder.itemView.setBackgroundColor(Color.parseColor("#a0a0a0"));
+        }
+            else
             holder.item_rental.setText(string2);
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String curName = "확인 다음 페이지로 ";
+                    Toast.makeText(view.getContext(), curName, Toast.LENGTH_SHORT).show();
+                }
+            });
 
     }
 

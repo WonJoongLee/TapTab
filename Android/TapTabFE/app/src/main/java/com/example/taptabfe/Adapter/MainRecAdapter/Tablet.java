@@ -10,11 +10,14 @@ public class Tablet /* implements Serializable*/ {
     private String device_name;  //기기의 모델명
     //private Integer battery;  //기기의 잔여 배터리량, 일단 현재는 보류하기로 했음
 
+    public Tablet(){}
+
     public Tablet(String id, String rental, String device_name) {
         this.id = id;
         this.rental = rental;
         this.device_name = device_name;
     }
+
 
     public String getId() {
         return id;
